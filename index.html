@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skena Prompt Studio</title>
+  <meta name="description" content="Buat prompt gambar AI, prompt video Google Veo, dan storyboard dari lirik lagu dengan karakter yang konsisten.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail">
+      <a class="brand" href="#gambar" aria-label="Skena Prompt Studio, ke halaman utama">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Skena</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Menu utama"></nav>
+      <button class="theme-toggle" id="theme-toggle" type="button">Ganti tema</button>
+    </aside>
+
+    <main class="main" id="view" tabindex="-1"></main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div id="dialog-root"></div>
+
+  <!-- Urutan penting: core → data → generators → views → app -->
+  <script src="js/core/utils.js" defer></script>
+  <script src="js/core/store.js" defer></script>
+  <script src="js/core/ui.js" defer></script>
+  <script src="js/data/options.js" defer></script>
+  <script src="js/generators/shared.js" defer></script>
+  <script src="js/generators/image.js" defer></script>
+  <script src="js/generators/veo.js" defer></script>
+  <script src="js/generators/lyrics.js" defer></script>
+  <script src="js/generators/storyboard.js" defer></script>
+  <script src="js/views/studio.js" defer></script>
+  <script src="js/views/image.js" defer></script>
+  <script src="js/views/veo.js" defer></script>
+  <script src="js/views/storyboard.js" defer></script>
+  <script src="js/views/characters.js" defer></script>
+  <script src="js/views/history.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
