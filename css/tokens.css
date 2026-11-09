@@ -1,0 +1,77 @@
+/* Design tokens. Ubah warna, font, dan jarak aplikasi dari sini.
+   Arah visual: papan slate film; indigo batik + kuning saga. */
+:root {
+  color-scheme: light;
+  --paper: #eef0f8;
+  --surface: #ffffff;
+  --surface-2: #f5f6fb;
+  --ink: #171c3a;
+  --muted: #59608a;
+  --line: #d6daea;
+  --accent: #2231a8;
+  --accent-ink: #ffffff;
+  --accent-soft: #e2e5fa;
+  --saga: #f6b21b;
+  --saga-ink: #171c3a;
+  --danger: #b3261e;
+  --slate: #171c3a;
+  --slate-ink: #f3f4fc;
+  --slate-line: #383f6e;
+  --slate-muted: #aab0d4;
+
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --font-prompt: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --text-xs: .78rem;
+  --text-sm: .875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius-control: 8px;
+  --radius-panel: 14px;
+  --rail-width: 212px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #11152c;
+  --surface: #1a2040;
+  --surface-2: #232a50;
+  --ink: #edeffa;
+  --muted: #a7aed2;
+  --line: #343b68;
+  --accent: #9aa8ff;
+  --accent-ink: #11152c;
+  --accent-soft: #2c3468;
+  --danger: #ff9a92;
+  --slate: #0a0d20;
+  --slate-line: #2f3562;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #11152c;
+    --surface: #1a2040;
+    --surface-2: #232a50;
+    --ink: #edeffa;
+    --muted: #a7aed2;
+    --line: #343b68;
+    --accent: #9aa8ff;
+    --accent-ink: #11152c;
+    --accent-soft: #2c3468;
+    --danger: #ff9a92;
+    --slate: #0a0d20;
+    --slate-line: #2f3562;
+  }
+}
